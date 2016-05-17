@@ -2,6 +2,8 @@
   // 1) What is the purpose of the 'this keyword'?
 
       //Answer
+      //You use this to not tie it down to one object. Ex: if you have a method that returns the firstname of user1 object
+      //then you would use this so you could do it multiply times and it isn't just for the user1 object
 
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
@@ -24,14 +26,32 @@
   //getUsername --> which is a function that returns the current object's username property. *Don't use 'user' instead use the 'this' keyword*
 
     //Code Here
+    var user = {
+      username: 'yoyodog',
+      email: 'yodog@doggy.com',
+      getUsername: function () {
+        return this.username;
+      }
+    }
 
 //Now, invoke the getUsername method and verify you got the username of the object and not anything else.
 
+user.getUsername();
 
 //Next Problem
 
 
 // Write the function definitions which will make the following function invocations function properly.
+
+function Car (make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.move = 0;
+  this.moveCar = function () {
+    return this.move += 10;
+  }
+}
 
   //Function Invocations Here
 
@@ -43,7 +63,7 @@ mustang.moveCar(); //increments mustang' move property by 10. Returns the new mo
 
 //Hint, you'll need to write a moveCar function which is added to every object that is being returned from the Car function. You'll also need to use the 'this' keyword properly in order to make sure you're invoking moveCar on the right object (prius vs mustang).
 
-
+//SPEC RUNNER IS ALL GREEN AT THIS POINT!!!
 
 //Continuation of previous problem
 
