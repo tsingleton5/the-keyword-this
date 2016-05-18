@@ -8,14 +8,20 @@
   // 2) What are the four rules that govern what the 'this keyword' is bound to and describe each?
 
       //Answer
+  //  Implicit Binding - calls whatever is left of the dot at call time
+  //  Explicit Binding - the first arguement passed in should be the object
+  //  Window/default Binding - attaching "this" to the global scope; this will open up all the variables stored in the DOM
+  //  New and prototype Binding - this is great to start new objects with the same properties
 
   // 3) What is the difference between call and apply?
 
       //Answer
+      // You can use arrays in the parameters with .apply but when using .call, you can't
 
   // 4) What does .bind do?
 
       //Answer
+      // it creates a new function with the same body as the original, this is referred to the passed in object
 
 
 //Next Problem
